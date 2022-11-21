@@ -10,7 +10,7 @@ body{
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -26,7 +26,6 @@ form{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 400px;
     max-width: 100%;
-    margin: auto;
 }
 
 .input{
@@ -69,4 +68,6 @@ small{
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 15px;
+    font-size: 10px;
 }
