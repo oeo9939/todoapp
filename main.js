@@ -12,7 +12,6 @@ form.addEventListener("submit", (e) => {
 function addTodo() {
     
     const todoText = input.value;
-    updateLS(todoText.value);
 
     if(todoText) {
         const todoEl = document.createElement("li");
@@ -34,18 +33,25 @@ function addTodo() {
 
         input.value = "";
 
-        
+        updateLS();
     }
 }
 
 function updateLS() {
     // const todoKey = ;
-    const notes = document.querySelectorAll("li");
-    // let notesTarget = notes.textContent;
-    // console.log(notes);
-    localStorage.setItem("aoua", JSON.stringify(notes));
+    const todosEl = document.querySelectorAll("li");
+    const todos = [];
 
+    todosEl.forEach((todoEl) => {
+        todos.push({
+            text: todoEl.innerText,
+            completed: todoEl.classList.contains("completed"),
+        });
+    });
 
+    localStorage.setItem("todos", JSON.stringify(todos));
+
+    console.log(todos);
 
     
 }
