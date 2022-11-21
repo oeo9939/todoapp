@@ -5,6 +5,11 @@ const todos = document.getElementById("todos");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    addTodo();
+});
+
+function addTodo() {
+    
     const todoText = input.value;
 
     if(todoText) {
@@ -25,5 +30,4 @@ form.addEventListener("submit", (e) => {
 
         input.value = "";
     }
-});
-
+}
